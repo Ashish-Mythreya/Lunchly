@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunchly - Hot, Fresh, Delivered.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-color: #FFF8F0;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            /* Adds a subtle orange glow around the button */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1), 0 0 15px rgba(251, 146, 60, 0.6);
+        }
+        .feature-card:hover {
+            transform: scale(1.03) translateY(-4px);
+            /* Adds a soft orange border glow */
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15), 0 0 0 3px rgba(251, 146, 60, 0.5);
+            transition: all 0.3s ease;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <img src="Lunchly_logo1.png" alt="Lunchly Logo" class="h-16 w-16">
+                <span class="text-2xl font-bold text-gray-800">Lunchly</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="text-gray-600 hover:text-orange-500 transition-transform hover:-translate-y-0.5">Services</a>
+                <a href="#how-it-works" class="text-gray-600 hover:text-orange-500 transition-transform hover:-translate-y-0.5">How It Works</a>
+                <a href="#menu" class="text-gray-600 hover:text-orange-500 transition-transform hover:-translate-y-0.5">Menu</a>
+                <a href="#pricing" class="text-gray-600 hover:text-orange-500 transition-transform hover:-translate-y-0.5">Pricing</a>
+            </div>
+            <a href="signup.html" class="hidden md:block bg-orange-500 text-white px-5 py-2 rounded-full font-semibold cta-button">Sign Up</a>
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#services" class="block py-2 text-gray-600 hover:text-orange-500">Services</a>
+            <a href="#how-it-works" class="block py-2 text-gray-600 hover:text-orange-500">How It Works</a>
+            <a href="#menu" class="block py-2 text-gray-600 hover:text-orange-500">Menu</a>
+            <a href="#pricing" class="block py-2 text-gray-600 hover:text-orange-500">Pricing</a>
+            <a href="#" class="block mt-4 bg-orange-500 text-white text-center px-5 py-2 rounded-full font-semibold cta-button">Sign Up</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-bg">
+            <div class="container mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 text-center md:text-left mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+                        Your Lunch, <span class="text-orange-500">Delivered Hot</span> & On Time.
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
+                        Never worry about lunch again. We pick up your homemade meal and deliver it fresh to your workplace, or you can subscribe to our delicious cloud kitchen meals.
+                    </p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#services" class="bg-orange-500 text-white px-8 py-3 rounded-full font-bold text-lg cta-button">Explore Services</a>
+                        <a href="#menu" class="bg-white text-orange-500 border-2 border-orange-500 px-8 py-3 rounded-full font-bold text-lg cta-button">View Menu</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="Hero.png" alt="Lunch delivery illustration" class="rounded-lg shadow-2xl w-full" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 fade-in">What We Offer</h2>
+                <p class="text-gray-600 mb-12 max-w-2xl mx-auto fade-in">Two convenient ways to enjoy a perfect lunch, every day.</p>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 feature-card fade-in">
+                        <div class="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Home-to-Work Delivery</h3>
+                        <p class="text-gray-600">Enjoy the comfort of your own food. We'll pick up your lunch box from home and deliver it to your office, ensuring it's hot and ready when you are.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 feature-card fade-in">
+                        <div class="bg-teal-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01M12 6v-1m0-1H9.5a2.5 2.5 0 00-2.5 2.5v1.586l-1.707 1.707A1 1 0 006 13v5a1 1 0 001 1h8a1 1 0 001-1v-5a1 1 0 00-.293-.707L15.5 10.586V9.5A2.5 2.5 0 0013 7h-1.5M12 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Subscription Meals</h3>
+                        <p class="text-gray-600">Choose from our delicious and healthy meal plans. Prepared fresh in our cloud kitchens, we deliver exciting new menus daily, including veg, non-veg, and fruit boxes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 fade-in">Simple Steps to a Great Lunch</h2>
+                <div class="grid md:grid-cols-3 gap-10 relative">
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 border-t-2 border-dashed border-orange-300" style="margin-top: -32px; z-index: 0;"></div>
+                    
+                    <div class="relative z-10 fade-in">
+                        <div class="bg-orange-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+                        <h3 class="text-xl font-semibold mb-2">Place Your Order</h3>
+                        <p class="text-gray-600">Choose your service, select your plan, and tell us your pickup and delivery locations.</p>
+                    </div>
+                    <div class="relative z-10 fade-in" style="transition-delay: 200ms;">
+                        <div class="bg-orange-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+                        <h3 class="text-xl font-semibold mb-2">We Prepare/Pick Up</h3>
+                        <p class="text-gray-600">Our team either prepares your fresh meal or picks up your lunch box right from your doorstep.</p>
+                    </div>
+                    <div class="relative z-10 fade-in" style="transition-delay: 400ms;">
+                        <div class="bg-orange-500 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+                        <h3 class="text-xl font-semibold mb-2">Enjoy Your Meal</h3>
+                        <p class="text-gray-600">Your delicious lunch arrives at your workplace, hot and on time. Enjoy!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">Fresh from Our Kitchens</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg feature-card fade-in">
+                        <img src="veg thali.png" alt="Vegetarian Meal Box" class="w-full h-56 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Veg Meal Box</h3>
+                            <p class="text-gray-600 mb-4">A balanced and wholesome vegetarian meal with a rotating daily menu of sabzi, dal, roti, rice, and salad.</p>
+                            <span class="text-lg font-semibold text-teal-600">Starts at ₹120/meal</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg feature-card fade-in" style="transition-delay: 200ms;">
+                        <img src="non veg thali.png" alt="Non-Vegetarian Meal Box" class="w-full h-56 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Non-Veg Meal Box</h3>
+                            <p class="text-gray-600 mb-4">A hearty non-vegetarian option featuring a daily special like chicken curry or fish fry, served with all the classic accompaniments.</p>
+                            <span class="text-lg font-semibold text-red-600">Starts at ₹150/meal</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg feature-card fade-in" style="transition-delay: 400ms;">
+                        <img src="fruit box.png" alt="Fruit Box" class="w-full h-56 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Fresh Fruit Box</h3>
+                            <p class="text-gray-600 mb-4">A colorful assortment of seasonal, freshly cut fruits to keep you energized and healthy throughout the day.</p>
+                            <span class="text-lg font-semibold text-yellow-600">Starts at ₹80/box</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <section id="pricing" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 fade-in">Flexible Plans for Everyone</h2>
+                <p class="text-gray-600 mb-12 max-w-2xl mx-auto fade-in">Choose a plan that fits your lifestyle and budget.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-orange-500 flex flex-col fade-in">
+                        <h3 class="text-2xl font-bold mb-2">Home-to-Work</h3>
+                        <p class="text-gray-500 mb-6">Your own food, delivered.</p>
+                        <p class="text-4xl font-extrabold mb-6">₹80<span class="text-lg font-medium text-gray-500">/delivery</span></p>
+                        <ul class="text-left space-y-3 mb-8 flex-grow">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Contactless Pickup</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Hot & Fresh Guarantee</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>On-time Delivery</li>
+                        </ul>
+                        <a href="#" class="w-full bg-orange-500 text-white py-3 rounded-full font-bold cta-button">Schedule Pickup</a>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 flex flex-col fade-in transition hover:border-orange-400" style="transition-delay: 200ms;">
+                        <h3 class="text-2xl font-bold mb-2">Veg Subscription</h3>
+                        <p class="text-gray-500 mb-6">22 meals a month.</p>
+                        <p class="text-4xl font-extrabold mb-6">₹2,500<span class="text-lg font-medium text-gray-500">/month</span></p>
+                         <ul class="text-left space-y-3 mb-8 flex-grow">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Daily Changing Menu</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Free Delivery</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Pause Anytime</li>
+                        </ul>
+                        <a href="#" class="w-full bg-gray-800 text-white py-3 rounded-full font-bold cta-button">Subscribe Now</a>
+                    </div>
+                     <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 flex flex-col fade-in transition hover:border-orange-400" style="transition-delay: 400ms;">
+                        <h3 class="text-2xl font-bold mb-2">Non-Veg Subscription</h3>
+                        <p class="text-gray-500 mb-6">22 meals a month.</p>
+                        <p class="text-4xl font-extrabold mb-6">₹3,200<span class="text-lg font-medium text-gray-500">/month</span></p>
+                         <ul class="text-left space-y-3 mb-8 flex-grow">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Exciting Daily Specials</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Free Delivery</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Pause Anytime</li>
+                        </ul>
+                        <a href="#" class="w-full bg-gray-800 text-white py-3 rounded-full font-bold cta-button">Subscribe Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Lunchly</h4>
+                    <p class="text-gray-400">Your daily partner for a delicious and hassle-free lunch.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#services" class="hover:text-orange-400">Services</a></li>
+                        <li class="mb-2"><a href="#menu" class="hover:text-orange-400">Menu</a></li>
+                        <li class="mb-2"><a href="#pricing" class="hover:text-orange-400">Pricing</a></li>
+                        <li class="mb-2"><a href="#" class="hover:text-orange-400">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul>
+                        <li class="mb-2"><a href="mailto:enagandhulaashishmythreya@gmail.com" class="hover:text-orange-400">enagandhulaashishmythreya@gmail.com</a></li>
+                        <li class="mb-2"><a href="tel:+911234567890" class="hover:text-orange-400">+91 123 456 7890</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">My Profiles</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/Ashish-Mythreya" title="GitHub" class="text-gray-400 hover:text-orange-400 transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ashishmythreyaenagandhula/" title="LinkedIn" class="text-gray-400 hover:text-orange-400 transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="https://ashish-mythreya.github.io/my-portfolio/" title="Portfolio" class="text-gray-400 hover:text-orange-400 transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h6a.75.75 0 000-1.5h-5.25V6z" clip-rule="evenodd" />
+                                <path d="M12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h6a.75.75 0 000-1.5h-5.25V6z" />
+                                <path d="M12 21a9 9 0 100-18 9 9 0 000 18zM12 3.75a8.25 8.25 0 110 16.5 8.25 8.25 0 010-16.5z" />
+                                <path d="M13.5 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2024 Lunchly. All Rights Reserved.</p>
+                <p class="mt-2 text-sm">
+                    Designed & Developed by 
+                    <a href="https://ashish-mythreya.github.io/my-portfolio" target="_blank" rel="noopener noreferrer" class="hover:text-orange-400">
+                        E.Ashish Mythreya
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="hidden fixed bottom-5 right-5 bg-orange-500 text-white p-3 rounded-full shadow-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition-opacity duration-300">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu on link click
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Fade-in animation on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.3,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+        // Back to Top Button Logic
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) { // Show button after scrolling 300px
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
